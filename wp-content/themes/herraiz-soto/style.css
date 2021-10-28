@@ -1,0 +1,453 @@
+/*
+Theme Name: Herraiz Soto
+Author: Victor Navarro
+Description: Plantailla creada para prueba Herraiz Soto
+Version: 1.0
+*/
+
+/*resets*/
+*{
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    height: 100%;
+}
+/*main styles*/
+header{
+    width: 100%;
+    height: 80px;
+    border-bottom: 4px solid #FA3B61;
+    position: relative;
+}
+/*menu principal*/
+.menu-principal{
+    position: absolute;
+    right: 150px;
+    top: 25px;
+}
+#menu-main-menu li{
+    list-style-type: none;
+    display: block;
+    float: left;
+    padding: 5px 15px; 
+    position: relative;
+}
+#menu-main-menu li a{
+    color: #5C0E46;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+#menu-main-menu li:after{
+    content: '';
+    width: 10%;
+    height: 2px;
+    position: relative;
+    bottom: 0;
+    background: #FA3B61;
+    left: 0;
+    right: 0;
+    display: block;
+    margin: auto;
+    visibility: hidden;
+    transition: all .5s ease-in-out;
+}
+#menu-main-menu li:hover:after{
+    visibility: initial;
+    transform: scale(10, 1);
+}
+/*logo*/
+.header__logo{
+    position: absolute;
+    left: 150px;
+    top: 30px; 
+}
+.header__logo:before{
+     content: '';
+     width: 10px;
+     height: 10px;
+     position: absolute;
+     left: -20px;
+     top:5px;
+     background: #5C0E46;
+     border-radius: 50%;
+}
+/*containers*/
+.container-allwidth{
+    display: flex;
+    flex: 0 0 100%;
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+    width: 1250px;
+    height: auto;
+}
+/*slider zone*/
+.slider-zone{
+    display: flex;
+    width:100%;
+    height: 908px;
+    background-color: #5C0E46;
+    justify-content: center;
+    position: relative;
+    overflow: hidden !important;
+    
+}
+
+
+.slider-zone__flower{
+    position: absolute;
+    left:-500px;
+    top:-200px
+}
+
+.slider-zone__copy{
+    display: flex;
+    position: absolute;
+    top: 83px;
+    right: 0;
+    color:white;
+    font-family: 'bw_graduallight';
+    font-size: 67.67px;
+    line-height: 71.81px;
+    letter-spacing: 0.19px;
+    max-width: 634px;
+}
+.slider-zone__copy b{
+    font-family: 'bw_gradualextrabold';
+}
+.slider-zone__copy em{
+    font-family: 'bw_graduallight';
+}
+/*video zone*/
+.video-zone{
+    width: 1070px;
+    height: 557px;
+    position: relative;
+    left: -240px;
+    top: -400px;
+    overflow: hidden;
+    transition: all 1s ease;
+    cursor: pointer;
+}
+.video-zone__img{
+    transition: all 1s ease;
+}
+.video-zone__img:hover{
+    transform: scale(1.1);
+}
+/*white zone*/
+.white-zone{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top:-180px
+}
+
+.white-zone__left{
+    flex: 1;
+    font-size: 78px;
+    font-family: 'bw_graduallight';
+    line-height: 90px;
+    color: #5C0E46;
+    position: relative;
+    
+}
+.white-zone__left:before{
+    content:url('img/mancha.gif'); 
+    filter: blur(28px);
+    -webkit-filter: blur(28px);
+    position:absolute; 
+    z-index:0; 
+    left: -80px;
+    top: -150px;
+}
+.white-zone__left p{
+    display: block;
+    padding: 0 80px;
+    position: relative;
+    z-index: 1;
+    visibility: hidden;
+}
+.white-zone__left strong{
+    font-family: 'bw_gradualextrabold';
+}
+.white-zone__right{
+    font-family: 'bw_gradualregular';
+    color:#695C5C;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 42px;
+    margin-top: 10px;
+    flex: 1;
+}
+.white-zone__right p{
+    visibility: hidden;
+}
+.white-zone__right small{
+    display: block;
+    padding-top: 50px;
+    font-family: 'bw_gradualregular';
+    font-size: 24px;
+    line-height: 38px;
+    color: #695C5C;
+
+}
+/*popup*/
+.video-zone__popup{
+    width: 70%;
+    height: auto;
+    margin: 40px auto;
+    background: white;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 0 80px rgba(0,0,0,.5);
+}
+.video-zone__close__btn{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    background: #FA3B61;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    position: absolute;
+    right: -10px;
+    top:-10px;
+    text-align: center;
+    border: 1px solid white;
+    cursor: pointer;
+    z-index: 100000;
+}
+.video-zone__popup__video{
+    width: 100%;
+    height: auto;
+}
+/*gray zone*/
+.gray-zone-wrapper{
+    display: flex;
+    width:100%;
+    height: auto;
+    padding: 175px 0;
+    background: #F4F4F4;
+    justify-content: center;
+    position: relative;
+    overflow: hidden !important;  
+}
+.gray-zone{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.gray-zone__left{
+    flex: 1;
+    text-align: center;
+    position: relative;
+    
+}
+.gray-zone__left img{
+    position: absolute;
+    z-index:1
+}
+.gray-zone__left .img__circle{
+    margin: auto;
+    left: 0;
+    right: 0;
+    top:50px;
+    z-index: 0;
+}
+.gray-zone__left .img__vaina{
+    top: -150px;
+    left: 230px;
+}
+.gray-zone__left .img__bamboo{
+    top: -100px;
+    left: 90px;
+}
+.gray-zone__left .img_berry{
+    top: -70px;
+    left: 310px;
+}
+.gray-zone__left .img__flower{
+    top: -150px;
+    left: 200px;
+}
+.gray-zone__left .img__leafes{
+    top: -90px;
+    left: 80px;
+}
+.gray-zone__right{
+    font-family: 'bw_gradualregular';
+    color:#695C5C;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 42px;
+    margin-top: 10px;
+    flex: 1;
+}
+
+.gray-zone__right small{
+    display: block;
+    font-size: 18px;
+    line-height: 28px;
+    padding-top: 30px;
+    color: #928989;
+
+}
+.gray-zone__right h2{
+    font-family: 'bw_graduallight';
+    font-weight: 600;
+    color: #5C0E46;
+    font-size: 60px;
+    line-height: 66.05px;
+    padding: 0 0 40px 0;
+    visibility: hidden;
+}
+.gray-zone__right h2 em{
+    font-family: 'bw_graduallight';
+    font-weight: 100;
+}
+.gray-zone__right h2 strong{
+    font-family: 'bw_gradualextrabold';
+}
+.gray-zone__right p{
+    font-size: 25px;
+    line-height: 35px;
+    color: #695C5C;
+    visibility: hidden;
+}
+.gray-zone__btn{
+    display: block;
+    width: 330px;
+    color:white;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding: 20px 0;
+    background: #FA3B61;
+    border: none;
+    border-radius: 30px;
+    margin: 40px 0;
+    cursor: pointer;
+    visibility: hidden;
+    transition:all .5s ease-in-out;
+}
+.gray-zone__btn:hover{
+    background: #5C0E46;
+}
+.img_berry{
+    width: 146px;
+}
+/*footer*/
+footer{
+    width: 100%;
+    height: 153px;
+    background: #5C0E46;
+
+}
+
+/*Font faces*/
+@font-face {
+    font-family: 'bw_gradualextrabold';
+    src: url('fonts/bwgradual-extrabold.woff2') format('woff2'),
+         url('fonts/bwgradual-extrabold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'bw_gradualextrabold_italic';
+    src: url('fonts/bwgradual-extrabolditalic.woff2') format('woff2'),
+         url('fonts/bwgradual-extrabolditalic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'bw_graduallight';
+    src: url('fonts/bwgradual-light.woff2') format('woff2'),
+         url('fonts/bwgradual-light.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'bw_graduallight_italic';
+    src: url('fonts/bwgradual-lightitalic.woff2') format('woff2'),
+         url('fonts/wgradual-lightitalic.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'bw_gradualmedium';
+    src: url('fonts/bwgradual-medium.woff2') format('woff2'),
+         url('fonts/bwgradual-medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'bw_gradualmedium_italic';
+    src: url('fonts/bwgradual-mediumitalic.woff2') format('woff2'),
+         url('fonts/bwgradual-mediumitalic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'bw_gradualregular';
+    src: url('fonts/bwgradual-regular.woff2') format('woff2'),
+         url('fonts/bwgradual-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'bw_gradualregular_italic';
+    src: url('fonts/bwgradual-regularitalic.woff2') format('woff2'),
+         url('fonts/bwgradual-regularitalic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+/*---------*/
